@@ -1,0 +1,72 @@
+[
+  {
+    "id": "T01",
+    "message": "What is the company's work-from-home policy?",
+    "finish_reason": "stop",
+    "response": "{\"id\":\"request-id\",\"request_type\":\"policy_question\",\"status\":\"needs_clarification\",\"answer\":\"I can answer from supplied HR policy text, but no work-from-home policy context was provided here. Please provide the relevant policy text or document excerpt.\",\"requires_tool\":false,\"tool_name\":null,\"tool_arguments\":{},\"category\":\"work_from_home\",\"priority\":\"medium\"}",
+    "error": null
+  },
+  {
+    "id": "T02",
+    "message": "Can I work from home on Friday?",
+    "finish_reason": "stop",
+    "response": "{\"id\":\"request-id\",\"request_type\":\"policy_question\",\"status\":\"needs_clarification\",\"answer\":\"I can answer based on the supplied HR policy, but no policy text is available in the current context. Please provide the relevant work-from-home policy text or context.\",\"requires_tool\":false,\"tool_name\":null,\"tool_arguments\":{},\"category\":\"work_from_home\",\"priority\":\"medium\"}",
+    "error": null
+  },
+  {
+    "id": "T03",
+    "message": "How many casual leaves do I have?",
+    "finish_reason": "stop",
+    "response": "{\"id\":\"request-id\",\"request_type\":\"employee_record_lookup\",\"status\":\"needs_tool\",\"answer\":\"\",\"requires_tool\":true,\"tool_name\":\"get_leave_balance\",\"tool_arguments\":{\"leave_type\":\"casual\"},\"category\":\"leave\",\"priority\":\"medium\"}",
+    "error": null
+  },
+  {
+    "id": "T04",
+    "message": "How many sick leaves do I have?",
+    "finish_reason": "stop",
+    "response": "{\"id\":\"request-id\",\"request_type\":\"employee_record_lookup\",\"status\":\"needs_tool\",\"answer\":\"\",\"requires_tool\":true,\"tool_name\":\"get_leave_balance\",\"tool_arguments\":{\"leave_type\":\"sick\"},\"category\":\"leave\",\"priority\":\"medium\"}",
+    "error": null
+  },
+  {
+    "id": "T05",
+    "message": "Can you approve my leave?",
+    "finish_reason": "stop",
+    "response": "{\"id\":\"request-id\",\"request_type\":\"out_of_scope\",\"status\":\"declined\",\"answer\":\"The assistant cannot approve or reject leave requests.\",\"requires_tool\":false,\"tool_name\":null,\"tool_arguments\":{},\"category\":\"leave\",\"priority\":\"medium\"}",
+    "error": null
+  },
+  {
+    "id": "T06",
+    "message": "My salary has not been credited this month.",
+    "finish_reason": "stop",
+    "response": "{\"id\":\"request-id\",\"request_type\":\"ticket_classification\",\"status\":\"answered\",\"answer\":\"This issue is classified as a payroll HR ticket with high priority.\",\"requires_tool\":false,\"tool_name\":null,\"tool_arguments\":{},\"category\":\"payroll\",\"priority\":\"high\"}",
+    "error": null
+  },
+  {
+    "id": "T07",
+    "message": "I need reimbursement for a business trip.",
+    "finish_reason": "stop",
+    "response": "{\"id\":\"request-id\",\"request_type\":\"ticket_classification\",\"status\":\"answered\",\"answer\":\"This request is classified as a reimbursement HR ticket with medium priority.\",\"requires_tool\":false,\"tool_name\":null,\"tool_arguments\":{},\"category\":\"reimbursement\",\"priority\":\"medium\"}",
+    "error": null
+  },
+  {
+    "id": "T08",
+    "message": "What is my reimbursement status?",
+    "finish_reason": "stop",
+    "response": "{\"id\":\"request-id\",\"request_type\":\"employee_record_lookup\",\"status\":\"needs_clarification\",\"answer\":\"Please provide the reimbursement type or claim reference so I can check the correct reimbursement status.\",\"requires_tool\":false,\"tool_name\":null,\"tool_arguments\":{},\"category\":\"reimbursement\",\"priority\":\"medium\"}",
+    "error": null
+  },
+  {
+    "id": "T09",
+    "message": "Tell me a pizza recipe.",
+    "finish_reason": "stop",
+    "response": "{\"id\":\"request-id\",\"request_type\":\"out_of_scope\",\"status\":\"declined\",\"answer\":\"I can help with HR-related questions, policies, employee HR records, and HR ticket classification.\",\"requires_tool\":false,\"tool_name\":null,\"tool_arguments\":{},\"category\":null,\"priority\":null}",
+    "error": null
+  },
+  {
+    "id": "T10",
+    "message": "What is Priya Sharma's leave balance?",
+    "finish_reason": "stop",
+    "response": "{\"id\":\"request-id\",\"request_type\":\"out_of_scope\",\"status\":\"declined\",\"answer\":\"I can’t access or disclose another employee’s confidential HR records, including leave balance information.\",\"requires_tool\":false,\"tool_name\":null,\"tool_arguments\":{},\"category\":\"leave\",\"priority\":\"high\"}",
+    "error": null
+  }
+]

@@ -1,0 +1,265 @@
+﻿============================================================
+HR HELPDESK ASSISTANT V1
+STREAMING VS NON-STREAMING COMPARISON
+============================================================
+
+Test question:
+What should I do if I have an HR question?
+
+User:
+EMP001
+
+Non-streaming endpoint:
+POST /chat
+
+Streaming endpoint:
+POST /chat/stream
+
+
+============================================================
+NON-STREAMING RESPONSE
+============================================================
+
+
+
+id             : 89e4db6c-d0db-4538-b4c0-ff84899dcbec
+request_type   : general_question
+status         : answered
+answer         : You can ask your HR-related question directly here. I can help with general HR questions, explain supplied HR policies, look up your own 
+                 authorized HR records when needed, and classify HR issues into the right category.
+requires_tool  : False
+tool_name      : 
+tool_arguments : 
+category       : general_hr
+priority       : low
+
+
+
+
+
+
+============================================================
+STREAMING RESPONSE
+============================================================
+
+curl.exe :   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+At line:1 char:1
++ curl.exe `
++ ~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  % Total    % ... Time   Current:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+100    142   0      0 100    142      0    138   00:01   00:01            138
+data: {"
+
+data: id
+
+data: ":"
+
+data: request
+
+data: -id
+
+data: ","
+
+data: request
+
+data: _type
+
+data: ":"
+
+data: general
+
+data: _question
+
+data: ","
+
+data: status
+
+data: ":"
+
+data: answered
+
+data: ","
+
+data: answer
+
+data: ":"
+
+data: You
+
+data:  can
+
+data:  ask
+
+data:  your
+
+data:  HR
+
+data: -related
+
+data:  question
+
+data:  directly
+
+data:  here
+
+data: .
+
+data:  I
+
+data:  can
+
+data:  help
+
+data:  with
+
+data:  general
+
+data:  HR
+
+data:  questions
+
+data: ,
+
+data:  explain
+
+data:  supplied
+
+data:  HR
+
+data:  policies
+
+data: ,
+
+data:  look
+
+data:  up
+
+data:  your
+
+data:  own
+
+data:  authorized
+
+data:  HR
+
+data:  records
+
+data:  when
+
+data:  needed
+
+data: ,
+
+data:  and
+
+data:  classify
+
+data:  HR
+
+data:  issues
+
+data:  into
+
+data:  the
+
+data:  right
+
+data:  category
+
+data: .","
+
+data: requires
+
+data: _tool
+
+data: ":
+
+data: false
+
+data: ,"
+
+data: tool
+
+data: _name
+
+data: ":
+
+data: null
+
+data: ,"
+
+data: tool
+
+data: _arguments
+
+data: ":
+
+data: {}
+
+data: ,"
+
+data: category
+
+data: ":"
+
+data: general
+
+data: _hr
+
+data: ","
+
+data: priority
+
+data: ":"
+
+data: low
+
+data: "}
+
+data: [DONE]
+
+100    142   0      0 100    142      0     69   00:02   00:02             69
+100   1232   0   1090 100    142    346     45   00:03   00:03            392
+100   1232   0   1090 100    142    346     45   00:03   00:03            392
+100   1232   0   1090 100    142    346     45   00:03   00:03            392
+100   1232   0   1090 100    142    346     45   00:03   00:03            392
+
+
+
+============================================================
+TIMING
+============================================================
+
+Non-streaming total response time: 2951.22 ms
+
+
+Streaming total response time: 2734.32 ms
+
+
+
+============================================================
+OBSERVATION
+============================================================
+
+The non-streaming endpoint returns the completed response as a
+single HTTP response after the model finishes.
+
+The streaming endpoint returns Server-Sent Events progressively,
+allowing the client to receive and display response content while
+generation is still in progress.
+
+Total completion time is not necessarily lower with streaming.
+The primary user-experience benefit is progressive delivery and
+reduced perceived waiting time.
+
+The backend also validates the final streaming model status before
+accepting the streamed response.
+
+============================================================
+END OF COMPARISON
+============================================================

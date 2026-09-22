@@ -1,0 +1,38 @@
+﻿============================================================
+HR HELPDESK ASSISTANT V1 - AUTHENTICATION & AUTHORIZATION TESTS
+============================================================
+
+TEST 1 - MISSING CLIENT TOKEN
+HTTP Status: 401
+Error: {"detail":"Missing Authorization header."}
+
+TEST 2 - WRONG CLIENT TOKEN
+HTTP Status: 401
+Error: {"detail":"Invalid client token."}
+
+TEST 3 - CROSS-EMPLOYEE DATA ACCESS
+Authenticated user: EMP001
+Requested employee: EMP002 / Priya Sharma
+
+
+id             : 1b24db38-560c-43c4-bd59-a58e8a97eb60
+request_type   : out_of_scope
+status         : declined
+answer         : I can only help with the authenticated user's own HR records and cannot access another employee's confidential leave information.
+requires_tool  : False
+tool_name      : 
+tool_arguments : 
+category       : leave
+priority       : high
+
+
+
+
+
+SECURITY EXPLANATION
+Authentication verifies that the client possesses the required client token.
+Authorization determines whether the authenticated employee is permitted to access the requested resource.
+In this V1 implementation, employee-record access is scoped to the authenticated employee ID.
+Production systems could use short-lived JWTs or an equivalent identity mechanism.
+
+END SECURITY TESTS

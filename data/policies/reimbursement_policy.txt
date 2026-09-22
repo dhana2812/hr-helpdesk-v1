@@ -1,0 +1,23 @@
+REIMBURSEMENT POLICY â€” HR HELPDESK V1 DEMO
+
+This is a fictional policy document created for the HR Helpdesk Assistant V1 assignment.
+
+1. Submission
+
+Employees should submit reimbursement claims with the required supporting documents through the approved reimbursement process.
+
+2. Processing
+
+Reimbursement claims are reviewed by the appropriate finance or HR processing team.
+
+3. Pending Claims
+
+If a reimbursement remains pending beyond the normal processing period, the employee should contact the appropriate HR or finance support team.
+
+4. Employee Status
+
+The assistant may retrieve an employee's reimbursement status from the deterministic employee records backend when the user is authorized to access their own record.
+
+5. Assistant Responsibility
+
+The assistant must not modify reimbursement records or claim statuses.

@@ -1,0 +1,27 @@
+LEAVE POLICY â€” HR HELPDESK V1 DEMO
+
+This is a fictional policy document created for the HR Helpdesk Assistant V1 assignment.
+
+1. Casual Leave
+
+Employees may use casual leave for short personal requirements.
+
+Employees should submit a leave request through the company's approved leave process.
+
+2. Sick Leave
+
+Sick leave may be used when an employee is unable to work because of illness.
+
+For extended sick leave, supporting medical documentation may be required according to company procedures.
+
+3. Approval
+
+The HR Helpdesk Assistant may explain the leave policy but must never automatically approve or reject employee leave.
+
+Leave approval requires the appropriate authorized human manager.
+
+4. Important
+
+Employee leave balances must be retrieved from the deterministic employee records backend.
+
+The assistant must never invent or estimate an employee's leave balance.

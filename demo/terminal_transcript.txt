@@ -1,0 +1,112 @@
+﻿============================================================
+HR HELPDESK ASSISTANT V1 — DEMO TRANSCRIPT
+============================================================
+
+Generated locally from the running application.
+
+============================================================
+DEMO 1 — GENERAL HR QUESTION
+============================================================
+
+
+
+id             : 1d13af07-ea17-4927-94e7-37ec2f0c250d
+request_type   : general_question
+status         : answered
+answer         : The HR helpdesk assistant can help with general HR questions, HR policy questions using supplied policy context, authorized 
+                 employee-specific HR record lookups through approved tools, and HR ticket classification. It can also decline requests that are outside 
+                 HR scope or that violate security rules.
+requires_tool  : False
+tool_name      : 
+tool_arguments : 
+category       : general_hr
+priority       : low
+
+
+
+
+
+============================================================
+DEMO 2 — TICKET CLASSIFICATION
+============================================================
+
+
+
+id             : 9ac6a3d0-9dde-4f6d-bde8-fb3bddc30e9e
+request_type   : ticket_classification
+status         : answered
+answer         : This request is classified as a payroll HR ticket with high priority.
+requires_tool  : False
+tool_name      : 
+tool_arguments : 
+category       : payroll
+priority       : high
+
+
+
+
+
+============================================================
+DEMO 3 — POLICY QUESTION
+============================================================
+
+
+
+id             : c446de65-51b0-4d04-9595-9a802a47cd03
+request_type   : policy_question
+status         : answered
+answer         : According to the supplied policy, Friday is not eligible for regular work-from-home requests. The policy also states that exceptions 
+                 require manager approval, and the assistant cannot approve or reject a work-from-home request.
+requires_tool  : False
+tool_name      : 
+tool_arguments : 
+category       : work_from_home
+priority       : medium
+
+
+
+
+
+============================================================
+DEMO 4 — DETERMINISTIC LEAVE LOOKUP
+============================================================
+
+
+
+id             : 24c895fa-9c4e-41e4-bf68-ee3247587c5f
+request_type   : employee_record_lookup
+status         : answered
+answer         : You have 8 casual leaves remaining.
+requires_tool  : False
+tool_name      : 
+tool_arguments : 
+category       : leave
+priority       : medium
+
+
+
+
+
+============================================================
+DEMO 5 — OUT-OF-SCOPE QUERY
+============================================================
+
+
+
+id             : abe71760-84eb-4e58-b604-4dcd2989cf9e
+request_type   : out_of_scope
+status         : declined
+answer         : I can help with HR-related questions, policies, employee HR records, and HR ticket classification.
+requires_tool  : False
+tool_name      : 
+tool_arguments : 
+category       : 
+priority       : 
+
+
+
+
+
+============================================================
+END OF DEMO TRANSCRIPT
+============================================================

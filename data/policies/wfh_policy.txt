@@ -1,0 +1,21 @@
+WFH POLICY â€” HR HELPDESK V1 DEMO
+
+This is a fictional policy document created for the HR Helpdesk Assistant V1 assignment.
+
+1. Regular Work From Home
+
+Employees may work remotely for a maximum of two days per week.
+
+2. Friday Restriction
+
+Friday is not eligible for regular work-from-home requests.
+
+3. Exceptions
+
+Exceptions to the regular work-from-home policy require manager approval.
+
+4. Assistant Responsibility
+
+The HR Helpdesk Assistant may explain this policy but must not approve or reject a work-from-home request.
+
+This policy is fictional and exists only for the HR Helpdesk Assistant V1 demonstration.
