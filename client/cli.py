@@ -146,6 +146,8 @@ def main():
     parser.add_argument("--token", default=DEFAULT_TOKEN, help="Client Bearer token")
     parser.add_argument("--user-id", default=DEFAULT_EMPLOYEE_ID, help="Authenticated employee ID")
     parser.add_argument("--stream", action="store_true", help="Enable streaming mode by default")
+    args = parser.parse_args()
+
     # Auto-resolve demo token for the requested employee if token was not explicitly overridden
     if args.token == DEFAULT_TOKEN and args.user_id.upper() != DEFAULT_EMPLOYEE_ID.upper():
         active_token = f"{DEFAULT_TOKEN}-{args.user_id.lower()}"
@@ -154,6 +156,7 @@ def main():
 
     conversation_id = f"cli-session-{uuid.uuid4().hex[:8]}"
     streaming_mode = args.stream
+
 
     print_banner()
 
