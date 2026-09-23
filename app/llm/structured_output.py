@@ -20,6 +20,11 @@ def parse_hr_response(content: str) -> HRResponse:
 
     try:
         data: Any = json.loads(content)
+        if isinstance(data, dict):
+            if "urgency" in data and "priority" not in data:
+                data["priority"] = data["urgency"]
+            elif "priority" in data and "urgency" not in data:
+                data["urgency"] = data["priority"]
     except json.JSONDecodeError as exc:
         raise StructuredOutputError(
             f"LLM response is not valid JSON: {exc}"

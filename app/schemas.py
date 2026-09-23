@@ -25,6 +25,8 @@ Category = Literal[
     "benefits",
     "attendance",
     "work_from_home",
+    "it_access",
+    "general",
     "general_hr",
     "other",
 ]
@@ -33,6 +35,7 @@ Priority = Literal[
     "low",
     "medium",
     "high",
+    "critical",
     "urgent",
 ]
 
@@ -50,6 +53,9 @@ class HRResponse(BaseModel):
 
     category: Category | None = None
     priority: Priority | None = None
+    urgency: Priority | None = None
+    summary: str | None = None
+    requires_human_review: bool = False
 
 
 class TicketClassification(BaseModel):

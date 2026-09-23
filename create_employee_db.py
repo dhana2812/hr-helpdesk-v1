@@ -33,6 +33,13 @@ def create_database():
             4,
             "Approved",
         ),
+        (
+            "EMP003",
+            "John Doe",
+            0,
+            2,
+            "Approved",
+        ),
     ]
 
     cursor.executemany("""

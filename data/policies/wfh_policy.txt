@@ -1,4 +1,4 @@
-WFH POLICY â€” HR HELPDESK V1 DEMO
+WFH POLICY — HR HELPDESK V1 DEMO
 
 This is a fictional policy document created for the HR Helpdesk Assistant V1 assignment.
 
@@ -10,11 +10,15 @@ Employees may work remotely for a maximum of two days per week.
 
 Friday is not eligible for regular work-from-home requests.
 
-3. Exceptions
+3. Probationer Eligibility
+
+Employees currently on probation are not eligible to apply for regular work-from-home or remote work until they have successfully completed their standard 90-day (3 months) probation period.
+
+4. Exceptions
 
 Exceptions to the regular work-from-home policy require manager approval.
 
-4. Assistant Responsibility
+5. Assistant Responsibility
 
 The HR Helpdesk Assistant may explain this policy but must not approve or reject a work-from-home request.
 

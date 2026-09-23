@@ -1,23 +1,33 @@
-REIMBURSEMENT POLICY â€” HR HELPDESK V1 DEMO
+REIMBURSEMENT POLICY — HR HELPDESK V1 DEMO
 
 This is a fictional policy document created for the HR Helpdesk Assistant V1 assignment.
 
-1. Submission
+1. Submission & Timelines
 
-Employees should submit reimbursement claims with the required supporting documents through the approved reimbursement process.
+Employees should submit reimbursement claims with all required itemized receipts and supporting documents through the approved company reimbursement portal.
+All reimbursement claims must be submitted within 30 days of the expense date. Claims submitted after 30 days will be rejected.
 
-2. Processing
+2. Daily Meal & Late-Night Dinner Limits
 
-Reimbursement claims are reviewed by the appropriate finance or HR processing team.
+Dinner expenses incurred while working late are strictly capped at $30 per day.
+Only the amount up to $30 is reimbursable. Any amount spent beyond this cap (for example, if an employee spends $55 on dinner, only $30 is reimbursed) must be paid out-of-pocket by the employee ($25 out-of-pocket).
 
-3. Pending Claims
+3. Explicit Non-Reimbursable Items & Alcohol Prohibition
 
-If a reimbursement remains pending beyond the normal processing period, the employee should contact the appropriate HR or finance support team.
+Alcoholic beverages, personal entertainment items, tips exceeding 20%, and traffic violations are strictly non-reimbursable under company policy, even when entertaining clients at dinner or during business travel.
 
-4. Employee Status
+4. Processing & Approvals
 
-The assistant may retrieve an employee's reimbursement status from the deterministic employee records backend when the user is authorized to access their own record.
+Reimbursement claims are reviewed and processed by the finance and HR processing team.
 
-5. Assistant Responsibility
+5. Pending Claims
+
+If a reimbursement claim remains pending beyond the normal processing period, the employee should contact the appropriate finance or HR support team for escalation.
+
+6. Employee Status Lookup
+
+The assistant may retrieve an authenticated employee's reimbursement status from the deterministic employee records backend when authorized.
+
+7. Assistant Responsibility
 
 The assistant must not modify reimbursement records or claim statuses.

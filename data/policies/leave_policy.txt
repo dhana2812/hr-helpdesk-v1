@@ -1,27 +1,46 @@
-LEAVE POLICY â€” HR HELPDESK V1 DEMO
+LEAVE POLICY — HR HELPDESK V1 DEMO
 
 This is a fictional policy document created for the HR Helpdesk Assistant V1 assignment.
 
 1. Casual Leave
 
 Employees may use casual leave for short personal requirements.
-
-Employees should submit a leave request through the company's approved leave process.
+Casual leave requests should be submitted at least 2 working days in advance through the company's approved HR portal, except in unforeseen emergencies.
+Employees may carry forward a maximum of 8 unused casual leaves into the next calendar year. Any unused leaves exceeding 8 will lapse automatically.
 
 2. Sick Leave
 
-Sick leave may be used when an employee is unable to work because of illness.
+Sick leave may be used when an employee is unable to work because of illness or medical emergencies.
+Employees should notify their manager on or before the start of the working day.
+Employees may take emergency sick leave for 1 or 2 days without a doctor's certificate. For sick leave extending beyond 2 consecutive working days, supporting documentation from a registered medical practitioner is mandatory upon return to work.
 
-For extended sick leave, supporting medical documentation may be required according to company procedures.
+3. Anti-Sandwich Leave Rule
 
-3. Approval
+Under Acme Corp's anti-sandwich leave rule, if an employee takes casual leave on working days immediately preceding and immediately following a weekend or company holiday (for example, taking casual leave on Thursday and the following Monday when Friday is an official company holiday), all intervening holidays and weekend days are counted as leave and deducted from the employee's casual leave balance.
+In this scenario, a total of 4 days are deducted (Thursday, Friday holiday, Saturday/Sunday, and Monday), rather than just 2 days.
 
-The HR Helpdesk Assistant may explain the leave policy but must never automatically approve or reject employee leave.
+4. Leave Balance Exhaustion & Loss of Pay
 
-Leave approval requires the appropriate authorized human manager.
+If an employee's leave balance is exhausted (0 remaining days), no paid casual leaves can be granted.
+Employees with exhausted leave balances who require time off must apply for Unpaid Leave / Loss of Pay (LOP), which requires prior written approval from their reporting manager and HR.
 
-4. Important
+5. Maternity Leave
 
-Employee leave balances must be retrieved from the deterministic employee records backend.
+Eligible female employees are entitled to up to 26 weeks of fully paid maternity leave.
+Employees must submit a formal leave application accompanied by a registered medical practitioner's certificate at least 8 weeks (2 months) prior to the expected date of delivery.
+An extension of up to 4 additional weeks may be requested with medical justification, subject to HR and management approval.
 
-The assistant must never invent or estimate an employee's leave balance.
+6. Paternity Leave
+
+Eligible male employees are entitled to 2 weeks (10 working days) of paid paternity leave for the birth or legal adoption of a child.
+Paternity leave must be requested at least 2 weeks in advance and should be utilized within 6 months following childbirth or adoption date.
+
+7. Leave Approval
+
+The HR Helpdesk Assistant may explain leave policies, entitlements, and notice requirements, but must never automatically approve or reject employee leave.
+All leave approvals require authorized human manager sign-off.
+
+8. Important
+
+Employee leave balances (such as available casual or sick leave days) must be retrieved from the deterministic employee records backend.
+The assistant must never invent, estimate, or alter an employee's leave balance.

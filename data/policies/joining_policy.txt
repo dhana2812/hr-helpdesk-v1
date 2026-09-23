@@ -1,0 +1,28 @@
+EMPLOYEE JOINING & ONBOARDING POLICY — HR HELPDESK V1 DEMO
+
+This is a fictional policy document created for the HR Helpdesk Assistant V1 assignment.
+
+1. Onboarding Documentation
+
+All new employees must submit required onboarding documents on or before Day 1, including:
+- Government-issued photo identification proof
+- Educational degrees and professional certifications
+- Relieving / experience letters from previous employers
+- Tax forms and direct deposit banking details
+
+2. Induction & Compliance Training
+
+All new joiners must complete the mandatory company orientation, security compliance training, and Code of Conduct certification within the first 14 days of joining.
+
+3. Provisioning of IT Assets & Access
+
+Laptops, system credentials, corporate email accounts, and building access cards are provisioned by the IT & Facilities team on the employee's official date of joining upon HR verification.
+
+4. Probation Period
+
+The standard probation period for new employees is 3 months (90 days) from their date of joining.
+Confirmation of employment is subject to a satisfactory performance assessment conducted by the reporting manager at the conclusion of the probation period.
+
+5. Assistant Responsibility
+
+The HR Helpdesk Assistant may guide new hires on onboarding processes, required documentation, and orientation schedules, but must never generate offer letters, modify onboarding records, or alter candidate profiles.

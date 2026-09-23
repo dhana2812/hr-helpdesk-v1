@@ -70,6 +70,8 @@ def send_chat_request(
             print(f"Status       : {data.get('status')}")
             print(f"Category     : {data.get('category')}")
             print(f"Priority     : {data.get('priority')}")
+            if data.get("requires_human_review") is not None:
+                print(f"Human Review : {data.get('requires_human_review')}")
             print(f"Tool Used    : {data.get('tool_name') or 'None'}")
             print(f"Request ID   : {data.get('id')}")
             print("-" * 70)

@@ -38,6 +38,42 @@ def test_reimbursement_policy():
     print("REIMBURSEMENT POLICY TEST: PASS")
 
 
+def test_office_hours_policy():
+    policy = load_policy("office_hours")
+
+    print("OFFICE HOURS POLICY TEST")
+    print("Policy loaded:", len(policy), "characters")
+
+    assert "9:00 AM to 6:00 PM" in policy
+    assert "Core collaboration hours are 10:00 AM to 4:00 PM" in policy
+
+    print("OFFICE HOURS POLICY TEST: PASS")
+
+
+def test_joining_policy():
+    policy = load_policy("joining")
+
+    print("JOINING POLICY TEST")
+    print("Policy loaded:", len(policy), "characters")
+
+    assert "Onboarding Documentation" in policy
+    assert "Probation Period" in policy
+
+    print("JOINING POLICY TEST: PASS")
+
+
+def test_separation_policy():
+    policy = load_policy("separation")
+
+    print("SEPARATION POLICY TEST")
+    print("Policy loaded:", len(policy), "characters")
+
+    assert "Resignation & Notice Period" in policy
+    assert "Full & Final Settlement" in policy
+
+    print("SEPARATION POLICY TEST: PASS")
+
+
 def test_invalid_policy():
     try:
         load_policy("payroll")
@@ -60,6 +96,15 @@ if __name__ == "__main__":
     print()
 
     test_reimbursement_policy()
+    print()
+
+    test_office_hours_policy()
+    print()
+
+    test_joining_policy()
+    print()
+
+    test_separation_policy()
     print()
 
     test_invalid_policy()

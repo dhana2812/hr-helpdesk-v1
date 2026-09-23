@@ -22,6 +22,69 @@ def test_valid():
     print("Request type:", result.request_type)
 
 
+def test_scenario_1_1_ambiguous_portal_error():
+    content = """
+    {
+        "id": "test-s1-1",
+        "request_type": "ticket_classification",
+        "status": "answered",
+        "answer": "Portal access error logged.",
+        "category": "it_access",
+        "urgency": "medium",
+        "requires_human_review": true,
+        "summary": "Employee experiencing unclear portal access error 403."
+    }
+    """
+    result = parse_hr_response(content)
+    assert result.category == "it_access"
+    assert result.urgency == "medium"
+    assert result.priority == "medium"
+    assert result.requires_human_review is True
+    assert result.summary == "Employee experiencing unclear portal access error 403."
+    print("SCENARIO 1.1 TEST: PASS")
+
+
+def test_scenario_1_2_intranet_calendar_low_urgency():
+    content = """
+    {
+        "id": "test-s1-2",
+        "request_type": "ticket_classification",
+        "status": "answered",
+        "answer": "Holiday calendar inquiry.",
+        "category": "general",
+        "urgency": "low",
+        "requires_human_review": false,
+        "summary": "Employee requesting location of intranet holiday calendar."
+    }
+    """
+    result = parse_hr_response(content)
+    assert result.category == "general"
+    assert result.urgency == "low"
+    assert result.requires_human_review is False
+    print("SCENARIO 1.2 TEST: PASS")
+
+
+def test_scenario_1_3_critical_payroll_failure():
+    content = """
+    {
+        "id": "test-s1-3",
+        "request_type": "ticket_classification",
+        "status": "answered",
+        "answer": "Regional payroll failure reported.",
+        "category": "payroll",
+        "urgency": "critical",
+        "requires_human_review": true,
+        "summary": "Regional direct deposit payroll failure affecting multiple employees."
+    }
+    """
+    result = parse_hr_response(content)
+    assert result.category == "payroll"
+    assert result.urgency == "critical"
+    assert result.priority == "critical"
+    assert result.requires_human_review is True
+    print("SCENARIO 1.3 TEST: PASS")
+
+
 def test_invalid_json():
     try:
         parse_hr_response("This is not JSON")
@@ -84,6 +147,15 @@ if __name__ == "__main__":
     test_valid()
     print()
 
+    test_scenario_1_1_ambiguous_portal_error()
+    print()
+
+    test_scenario_1_2_intranet_calendar_low_urgency()
+    print()
+
+    test_scenario_1_3_critical_payroll_failure()
+    print()
+
     test_invalid_json()
     print()
 
@@ -92,4 +164,6 @@ if __name__ == "__main__":
 
     test_invented_category()
 
+    print("=" * 60)
+    print("ALL STRUCTURED OUTPUT TESTS PASSED")
     print("=" * 60)

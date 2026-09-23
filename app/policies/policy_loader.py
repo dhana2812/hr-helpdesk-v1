@@ -8,6 +8,9 @@ POLICY_FILES = {
     "leave": "leave_policy.txt",
     "work_from_home": "wfh_policy.txt",
     "reimbursement": "reimbursement_policy.txt",
+    "office_hours": "office_hours_policy.txt",
+    "joining": "joining_policy.txt",
+    "separation": "separation_policy.txt",
 }
 
 

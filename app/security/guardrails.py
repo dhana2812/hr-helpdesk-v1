@@ -218,6 +218,11 @@ def check_catastrophic_action(message: str) -> GuardrailResult:
     # 5. System prompt / API key / secrets / credentials
     secret_indicators = (
         "system prompt",
+        "system prompts",
+        "system instruction",
+        "system instructions",
+        "prompt component",
+        "prompt components",
         "api key",
         "secret",
         "secrets",
@@ -239,6 +244,12 @@ def check_catastrophic_action(message: str) -> GuardrailResult:
         "print",
         "expose",
         "share",
+        "repeat",
+        "what are",
+        "what is",
+        "list",
+        "dump",
+        "read",
     )
 
     if (

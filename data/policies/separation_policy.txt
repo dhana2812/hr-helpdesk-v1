@@ -1,0 +1,29 @@
+EMPLOYEE SEPARATION & TERMINATION POLICY — HR HELPDESK V1 DEMO
+
+This is a fictional policy document created for the HR Helpdesk Assistant V1 assignment.
+
+1. Resignation & Notice Period
+
+Employees wishing to resign must submit a formal written resignation letter through the company's HR portal.
+The standard notice period is 30 days, unless a different notice duration is explicitly specified in the employee's employment agreement.
+
+2. Notice Period Waiver or Buyout
+
+Any request for early release, notice period waiver, or notice buyout must be reviewed and approved by the reporting manager and the HR department.
+
+3. Involuntary Separation & Termination
+
+Involuntary termination of employment for cause, performance reasons, or restructuring must strictly adhere to documented disciplinary procedures, performance improvement plans (PIP), and HR leadership authorization.
+
+4. Handover & Asset Return
+
+Prior to their last working day, departing employees must complete all assigned project handovers and return all company property, including laptops, monitors, corporate credit cards, security tokens, and access badges.
+
+5. Exit Clearance & Full & Final Settlement (F&F)
+
+Departing employees must complete departmental clearances (IT, Finance, Administration, and Reporting Manager).
+Full and final financial settlement (including unpaid salary, accrued leave encashment, and applicable gratuity) is processed within 30 to 45 days after the last working day following all clearances.
+
+6. Assistant Responsibility
+
+The HR Helpdesk Assistant may provide general information regarding the separation process, notice period rules, and exit requirements, but must NEVER initiate, approve, execute, or cancel employee separations, resignations, or severance payouts.

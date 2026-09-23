@@ -29,6 +29,7 @@ from app.schemas import ChatRequest, HRResponse
 from app.security.auth import authenticate_client
 from app.security.guardrails import check_catastrophic_action
 from app.tools.employee_records import get_leave_balance
+from app.tools.ticket_tools import create_ticket
 
 
 app = FastAPI(
@@ -51,12 +52,23 @@ def detect_policy_name(message: str) -> str | None:
     reimbursement_terms = (
         "reimbursement",
         "reimburse",
+        "reimbursable",
         "expense claim",
         "expense claims",
         "travel expense",
         "travel expenses",
         "business trip",
         "business travel",
+        "dinner",
+        "meal",
+        "meals",
+        "late night",
+        "late-night",
+        "alcohol",
+        "alcoholic",
+        "beverage",
+        "receipt",
+        "receipts",
     )
 
     wfh_terms = (
@@ -68,14 +80,78 @@ def detect_policy_name(message: str) -> str | None:
     )
 
     leave_terms = (
-        "leave policy",
-        "leave rules",
-        "leave entitlement",
+        "leave",
+        "leaves",
+        "sandwich",
+        "anti-sandwich",
+        "carry forward",
+        "carry-forward",
+        "carryover",
         "casual leave",
         "sick leave",
         "annual leave",
-        "vacation policy",
-        "time off policy",
+        "maternity",
+        "paternity",
+        "parental leave",
+        "vacation",
+        "time off",
+        "earned leave",
+        "privilege leave",
+        "bereavement leave",
+    )
+
+    office_hours_terms = (
+        "office hour",
+        "office hours",
+        "working hour",
+        "working hours",
+        "work hour",
+        "work hours",
+        "business hour",
+        "business hours",
+        "shift timing",
+        "shift timings",
+        "shift hour",
+        "shift hours",
+        "core hour",
+        "core hours",
+        "office timing",
+        "office timings",
+        "work timing",
+        "work timings",
+        "standard hours",
+    )
+
+    joining_terms = (
+        "joining",
+        "onboarding",
+        "new hire",
+        "new joiner",
+        "new employee",
+        "probation",
+        "induction",
+        "orientation",
+        "first day",
+        "joining date",
+        "joining policy",
+        "onboarding policy",
+    )
+
+    separation_terms = (
+        "separation",
+        "termination",
+        "terminate",
+        "resignation",
+        "resign",
+        "notice period",
+        "exit policy",
+        "offboarding",
+        "exit interview",
+        "exit clearance",
+        "last working day",
+        "full and final",
+        "f&f",
+        "fnf",
     )
 
     if any(term in normalized_message for term in reimbursement_terms):
@@ -86,6 +162,15 @@ def detect_policy_name(message: str) -> str | None:
 
     if any(term in normalized_message for term in leave_terms):
         return "leave"
+
+    if any(term in normalized_message for term in office_hours_terms):
+        return "office_hours"
+
+    if any(term in normalized_message for term in joining_terms):
+        return "joining"
+
+    if any(term in normalized_message for term in separation_terms):
+        return "separation"
 
     return None
 
@@ -170,6 +255,20 @@ def execute_tool(
             leave_type=leave_type,
         )
 
+    if tool_name == "create_ticket":
+        category = tool_arguments.get("category", "it_access")
+        priority = tool_arguments.get("priority") or tool_arguments.get("urgency", "high")
+        summary = tool_arguments.get("summary") or "Support ticket"
+        requires_human_review = bool(tool_arguments.get("requires_human_review", True))
+
+        return create_ticket(
+            authenticated_user_id=authenticated_user_id,
+            category=category,
+            priority=priority,
+            summary=summary,
+            requires_human_review=requires_human_review,
+        )
+
     return {
         "success": False,
         "error": f"Unsupported backend tool: {tool_name}",
@@ -233,6 +332,7 @@ async def process_tool_call(
 
     if tool_name not in {
         "get_leave_balance",
+        "create_ticket",
     }:
         raise StructuredOutputError(
             f"Unsupported tool requested by LLM: {tool_name}"
