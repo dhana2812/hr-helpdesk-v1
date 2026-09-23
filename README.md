@@ -4,7 +4,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-1.0.0-green.svg)](https://fastapi.tiangolo.com/)
 [![Pydantic v2](https://img.shields.io/badge/Pydantic-v2.0+-orange.svg)](https://docs.pydantic.dev/)
 [![OpenRouter](https://img.shields.io/badge/LLM-OpenRouter%20%2F%20GPT--5.4-purple.svg)](https://openrouter.ai/)
-[![Tests](https://img.shields.io/badge/tests-36%20passed-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/tests-60%20passed-brightgreen.svg)]()
 
 A robust, deterministic, LLM-powered HR Helpdesk Assistant built with FastAPI, SQLite, and OpenRouter (GPT-5.4). It fulfills all 4 core business requirements while enforcing strict security guardrails, deterministic data retrieval, conversation memory, structured JSON validation, and full-lifecycle observability with cost tracking.
 
@@ -211,7 +211,7 @@ Run the full automated test suite with pytest:
 ```bash
 pytest -v
 ```
-All **36 tests** cover authorization enforcement, memory deduplication, deterministic database tools, policy loaders, response status validation, guardrail defenses, and schema validation.
+All **60 tests** cover authorization enforcement, memory deduplication, deterministic database tools, policy loaders, response status validation, guardrail defenses, and schema validation.
 
 ---
 
